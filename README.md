@@ -31,8 +31,7 @@ Hi 👋 I'm <b>Joy Walukaya</b>, a Computer Science student at Dedan Kimathi Uni
 | Type | Document | What it covers |
 | :--: | :-- | :-- |
 | 📘 Guide | [How to Set Up a Python Virtual Environment](guides/how-to-set-up-a-python-virtual-environment.md) | Creating and using an isolated Python environment |
-| 📗 API Reference | [Get a Post — JSONPlaceholder](api-docs/get-a-post-jsonplaceholder-api.md) | A written reference for a REST endpoint |
-| 📙 OpenAPI Spec | [JSONPlaceholder Posts API](api-docs/jsonplaceholder-posts-openapi.yaml) | The same API modelled in the OpenAPI standard |
+| 📗 API Docs | Get a Post (JSONPlaceholder): [written reference](api-docs/get-a-post-jsonplaceholder-api.md) · [OpenAPI spec](api-docs/jsonplaceholder-posts-openapi.yaml) | The same REST endpoint documented two ways, as a readable prose reference and as an OpenAPI 3.0 model |
 
 ###
 
