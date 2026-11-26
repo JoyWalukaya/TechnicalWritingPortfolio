@@ -9,6 +9,7 @@ Hi, I am Joy Walukaya, a Computer Science student at Dedan Kimathi University of
 
 ### API Documentation
 - [Get a Post (JSONPlaceholder API)](api-docs/get-a-post-jsonplaceholder-api.md) a reference for a REST endpoint that returns a single post
+   [JSONPlaceholder Posts API (OpenAPI spec)](api-docs/jsonplaceholder-posts-openapi.yaml) an OpenAPI 3.0 specification for the posts endpoints
 
 ## About me
 - GitHub: https://github.com/JoyWalukaya
