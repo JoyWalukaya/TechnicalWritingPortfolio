@@ -1,0 +1,85 @@
+openapi: 3.0.3
+
+info:
+  title: JSONPlaceholder Posts API
+  description: >
+    A reference for the posts endpoints of JSONPlaceholder, a free public REST API
+    used for testing and prototyping. No authentication is required.
+  version: 1.0.0
+  contact:
+    name: Joy Walukaya
+    url: https://github.com/JoyWalukaya
+
+servers:
+  - url: https://jsonplaceholder.typicode.com
+    description: Public JSONPlaceholder server
+
+paths:
+  /posts:
+    get:
+      summary: Get all posts
+      description: Returns a list of all 100 posts.
+      operationId: getPosts
+      responses:
+        '200':
+          description: A list of posts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+
+  /posts/{id}:
+    get:
+      summary: Get a post
+      description: Returns a single post by its ID.
+      operationId: getPost
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The unique ID of the post. Valid values are 1 to 100.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+          example: 1
+      responses:
+        '200':
+          description: The requested post.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+              example:
+                userId: 1
+                id: 1
+                title: sunt aut facere repellat provident occaecati excepturi optio reprehenderit
+                body: quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae
+        '404':
+          description: No post exists for the given ID. The response body is an empty object.
+          content:
+            application/json:
+              schema:
+                type: object
+
+components:
+  schemas:
+    Post:
+      type: object
+      properties:
+        userId:
+          type: integer
+          description: The ID of the user who created the post.
+          example: 1
+        id:
+          type: integer
+          description: The unique ID of the post.
+          example: 1
+        title:
+          type: string
+          description: The title of the post.
+        body:
+          type: string
+          description: The main text content of the post.
